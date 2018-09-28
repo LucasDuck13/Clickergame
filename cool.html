@@ -1,0 +1,56 @@
+<body>
+<label id="display"></label> <br>
+<input type="button" value="klik mij" id="inc" onclick="incNumber()"/> <br>
+<input type="button" value="50 // 1" id="10" onclick="_10()"/> <br>
+<input type="button" value="500 // 11" id="100" onclick="_100()"/> <br>
+<input type="button" value="10000 // 121" id="1000" onclick="_1000()"/> <br>
+<input type="button" value="1000000 // 1221" id="10000" onclick="_10000()"/> <br>
+
+
+
+    <script type="text/javascript">
+    var x = 0;
+    var i = 50;
+    function incNumber() {
+            i = i + x;
+        document.getElementById("display").innerHTML = i;
+      }
+
+    function _10() {
+      if (i < 50) {
+        window.alert("je hebt minimaal 10 nodig")
+      } else {
+      x = x + 1;
+      i = i - 50;
+      document.getElementById("display").innerHTML = i
+    }
+    }
+    function _100() {
+      if (i < 500) {
+        window.alert("je hebt minimaal 100 nodig")
+      } else {
+      x = x + 11;
+      i = i - 500;
+      document.getElementById("display").innerHTML = i
+    }
+    }
+    function _1000() {
+      if (i < 10000) {
+        window.alert("je hebt minimaal 1.000 nodig")
+      } else {
+      x = x + 121;
+      i = i - 10000;
+      document.getElementById("display").innerHTML = i
+    }
+    }
+    function _10000() {
+      if (i < 100000) {
+        window.alert("je hebt minimaal 10.000 nodig")
+      } else {
+      x = x + 1221;
+      i = i - 100000;
+      document.getElementById("display").innerHTML = i
+    }
+    }
+</script>
+</body>
