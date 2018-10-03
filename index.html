@@ -103,14 +103,13 @@ i = JSON.parse(i_down)
 x = JSON.parse(x_down)
 
     function incNumber() {
+      document.getElementById("display").innerHTML = i;
             i_down = localStorage.getItem("geld");
             x_down = localStorage.getItem("mpc");
             i = JSON.parse(i_down)
             x = JSON.parse(x_down)
             i = i + x;
             document.getElementById("display").innerHTML = i;
-            document.getElementById("test3000").innerHTML = l;
-            document.getElementById("test4000").innerHTML = x;
             x_save = JSON.stringify(x);
             i_save = JSON.stringify(i);
             l_save = JSON.stringify(l);
@@ -122,6 +121,7 @@ x = JSON.parse(x_down)
             i = JSON.parse(i_down)
             x = JSON.parse(x_down)
             l = JSON.parse(l_down)
+      document.getElementById("display").innerHTML = i;
       }
 
     function _10() {
