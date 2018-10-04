@@ -102,12 +102,15 @@ if (localStorage.length == 0){
   var i = 50;
   var x = 0;
   var l = 0;
+  var decPlaces = 0
 }
 else {
  var i = JSON.parse(localStorage.getItem("geld"))
  var x = JSON.parse(localStorage.getItem("mpc"))
  var l = JSON.parse(localStorage.getItem("gps"))
+ var decPlaces = 0
 }
+
 document.getElementById("display").innerHTML = i;
 x_save = JSON.stringify(x);
 i_save = JSON.stringify(i);
@@ -125,6 +128,7 @@ x = JSON.parse(x_down)
             i = JSON.parse(i_down)
             x = JSON.parse(x_down)
             i = i + x;
+
             document.getElementById("display").innerHTML = i;
             x_save = JSON.stringify(x);
             i_save = JSON.stringify(i);
@@ -146,6 +150,7 @@ x = JSON.parse(x_down)
       } else {
       x = x + 1;
       i = i - 50;
+
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -163,6 +168,7 @@ x = JSON.parse(x_down)
       } else {
       x = x + 11;
       i = i - 500;
+
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -180,6 +186,7 @@ x = JSON.parse(x_down)
       } else {
       x = x + 121;
       i = i - 10000;
+
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -197,6 +204,7 @@ x = JSON.parse(x_down)
       } else {
       x = x + 1221;
       i = i - 1000000;
+
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -214,6 +222,7 @@ x = JSON.parse(x_down)
       } else {
       x = x + 12321;
       i = i - 25000000;
+
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -231,6 +240,7 @@ x = JSON.parse(x_down)
       } else {
       x = x + 1234321;
       i = i - 250000000;
+
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -248,6 +258,7 @@ x = JSON.parse(x_down)
       } else {
       x = x + 2345432;
       i = i - 1000000000;
+
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -265,6 +276,7 @@ x = JSON.parse(x_down)
       } else {
       x = x + 10000000;
       i = i - 100000000000;
+
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -283,6 +295,7 @@ x = JSON.parse(x_down)
       } else {
           l = l + 1;
           i = i - 500;
+
           document.getElementById("display").innerHTML = i;
           document.getElementById("test3000").innerHTML = l;
           document.getElementById("test4000").innerHTML = x;
@@ -304,6 +317,7 @@ x = JSON.parse(x_down)
       } else {
           l = l + 11;
           i = i - 10000;
+
           document.getElementById("display").innerHTML = i;
           document.getElementById("test3000").innerHTML = l;
           document.getElementById("test4000").innerHTML = x;
@@ -325,6 +339,7 @@ x = JSON.parse(x_down)
       } else {
           l = l + 121;
           i = i - 1000000;
+
           document.getElementById("display").innerHTML = i;
           document.getElementById("test3000").innerHTML = l;
           document.getElementById("test4000").innerHTML = x;
@@ -346,6 +361,7 @@ x = JSON.parse(x_down)
       } else {
           l = l + 1221;
           i = i - 25000000;
+
           document.getElementById("display").innerHTML = i;
           document.getElementById("test3000").innerHTML = l;
           document.getElementById("test4000").innerHTML = x;
@@ -367,6 +383,7 @@ x = JSON.parse(x_down)
       } else {
           l = l + 12321;
           i = i - 250000000;
+
           document.getElementById("display").innerHTML = i;
           document.getElementById("test3000").innerHTML = l;
           document.getElementById("test4000").innerHTML = x;
@@ -388,6 +405,7 @@ x = JSON.parse(x_down)
       } else {
           l = l + 1234321;
           i = i - 1000000000;
+
           document.getElementById("display").innerHTML = i;
           document.getElementById("test3000").innerHTML = l;
           document.getElementById("test4000").innerHTML = x;
@@ -409,6 +427,7 @@ x = JSON.parse(x_down)
       } else {
           l = l + 2345432;
           i = i - 100000000000;
+
           document.getElementById("display").innerHTML = i;
           document.getElementById("test3000").innerHTML = l;
           document.getElementById("test4000").innerHTML = x;
@@ -430,6 +449,7 @@ x = JSON.parse(x_down)
       } else {
           l = l + 10000000;
           i = i - 1000000000000;
+
           document.getElementById("display").innerHTML = i;
           document.getElementById("test3000").innerHTML = l;
           document.getElementById("test4000").innerHTML = x;
@@ -446,6 +466,7 @@ x = JSON.parse(x_down)
     }
     function timer() {
       i = i + l;
+
       l_save = JSON.stringify(l);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
