@@ -479,11 +479,11 @@ function timer() {
   document.getElementById("display").innerHTML = i
 }
 window.setInterval(timer, 1000);
-function t_s(num)
+function t_s(i)
   {
-    var num_parts = num.toString().split(".");
-    num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return num_parts.join(".");
+    var i_parts = i.toString().split(".");
+    i_parts[0] = i_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return i_parts.join(".");
   }
 </script>
 </body>
