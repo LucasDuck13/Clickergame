@@ -98,7 +98,7 @@ a:active {
 
 
 <script type="text/javascript">
-if (localStorage.getItem("sorry") === null) {
+if (localStorage.getItem("sorry") !== null) {
   var sorry = 0
   localStorage.setItem("sorry", sorry)
   sorry = localStorage.getItem("sorry")
