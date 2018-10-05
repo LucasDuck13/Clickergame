@@ -98,18 +98,7 @@ a:active {
 
 
 <script type="text/javascript">
-if (localStorage.getItem("sorry") !== null) {
-  var sorry = 0
-  localStorage.setItem("sorry", sorry)
-  sorry = localStorage.getItem("sorry")
-} else {
-  sorry = localStorage.getItem("sorry")
-}
-if (sorry == 0){
-  localStorage.clear();
-  var sorry = 5
-  localStorage.setItem("sorry", sorry)
-}
+localStorage.clear()
 if (localStorage.getItem("mpc" == null)){
   var n = 50;
   var i = 50;
