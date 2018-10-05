@@ -98,7 +98,9 @@ a:active {
 
 
 <script type="text/javascript">
+localStorage.clear();
 if (localStorage.length == 0){
+  var n = 50;
   var i = 50;
   var x = 0;
   var l = 0;
@@ -108,25 +110,33 @@ else {
  var i = JSON.parse(localStorage.getItem("geld"))
  var x = JSON.parse(localStorage.getItem("mpc"))
  var l = JSON.parse(localStorage.getItem("gps"))
+ var n = JSON.parse(localStorage.getItem("totgeld"))
  var decPlaces = 0
 }
 
 document.getElementById("display").innerHTML = i;
 x_save = JSON.stringify(x);
 i_save = JSON.stringify(i);
+n_save = JSON.stringify(n);
 localStorage.setItem("geld", i_save);
 localStorage.setItem("mpc", x_save);
+localStorage.setItem("totgeld", n_save);
 i_down = localStorage.getItem("geld");
 x_down = localStorage.getItem("mpc");
-i = JSON.parse(i_down)
-x = JSON.parse(x_down)
+n_down = localStorage.getItem("totgeld")
+i = JSON.parse(i_down);
+x = JSON.parse(x_down);
+n = JSON.parse(n_down);
 
 function incNumber() {
   document.getElementById("display").innerHTML = i;
+      n_down = localStorage.getItem("totgeld")
       i_down = localStorage.getItem("geld");
       x_down = localStorage.getItem("mpc");
-      i = JSON.parse(i_down)
-      x = JSON.parse(x_down)
+      i = JSON.parse(i_down);
+      x = JSON.parse(x_down);
+      n = JSON.parse(n_down);
+      n = n + x;
       i = i + x;
       t_s(i)
       document.getElementById("display").innerHTML = i;
@@ -467,16 +477,22 @@ function _10000000s() {
 }
 function timer() {
   i = i + l;
-
+  n = n + l;
   l_save = JSON.stringify(l);
   i_save = JSON.stringify(i);
+  n_save = JSON.stringify(n);
+
   localStorage.setItem("geld", i_save);
   localStorage.setItem("gps", l_save);
+  localStorage.setItem("totgeld", n_save);
   i_down = localStorage.getItem("geld", i_save);
   l_down = localStorage.getItem("gps", l_save);
-  i = JSON.parse(i_down)
-  l = JSON.parse(l_down)
-  document.getElementById("display").innerHTML = i
+  l_down = localStorage.getItem("totgeld", n_save);
+  i = JSON.parse(i_down);
+  l = JSON.parse(l_down);
+  n = JSON.parse(n_down);
+
+  document.getElementById("display").innerHTML = i;
 }
 window.setInterval(timer, 1000);
 function t_s(i)
