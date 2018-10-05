@@ -103,6 +103,11 @@ if (localStorage.getItem("mpc" === null)){
   var i = 50;
   var x = 0;
   var l = 0;
+} else if (JSON.parse(localStorage.getItem("geld")) == 0){
+var i = 50;
+var n = 50;
+var x = 0;
+var l = 0;
 } else {
  var i = JSON.parse(localStorage.getItem("geld"))
  var x = JSON.parse(localStorage.getItem("mpc"))
