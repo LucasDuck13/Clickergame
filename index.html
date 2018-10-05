@@ -98,7 +98,10 @@ a:active {
 
 
 <script type="text/javascript">
-localStorage.clear();
+if (sorry == 0){
+  localStorage.clear();
+  sorry = 5
+}
 if (localStorage.length == 0){
   var n = 50;
   var i = 50;
