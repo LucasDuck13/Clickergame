@@ -124,9 +124,7 @@ function met_punt(){
   return v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 }
-v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+document.getElementById("display").innerHTML = i;
 x_save = JSON.stringify(x);
 i_save = JSON.stringify(i);
 n_save = JSON.stringify(n);
@@ -141,9 +139,7 @@ x = JSON.parse(x_down);
 n = JSON.parse(n_down);
 
 function incNumber() {
-  v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+  document.getElementById("display").innerHTML = i;
       n_down = localStorage.getItem("totgeld")
       i_down = localStorage.getItem("geld");
       x_down = localStorage.getItem("mpc");
@@ -152,8 +148,8 @@ document.getElementById("display").innerHTML = v;
       n = JSON.parse(n_down);
       n = n + x;
       i = i + x;
-      v = i
-      met_punt(n)
+      v = i;
+      v = met_punt(v)
       document.getElementById("display").innerHTML = v;
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
@@ -171,9 +167,7 @@ document.getElementById("display").innerHTML = v;
       l = JSON.parse(l_down);
       n = JSON.parse(n_down);
       t_s(i)
-      v = i
-      met_punt(n)
-      document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
 }
 
 function _10() {
@@ -191,8 +185,8 @@ function _10() {
   x_down = localStorage.getItem("mpc");
   i = JSON.parse(i_down)
   x = JSON.parse(x_down)
-  v = i
-  met_punt(n)
+  v = i;
+  v = met_punt(v)
   document.getElementById("display").innerHTML = v;
 }
 }
@@ -211,7 +205,9 @@ function _100() {
   x_down = localStorage.getItem("mpc");
   i = JSON.parse(i_down)
   x = JSON.parse(x_down)
-  document.getElementById("display").innerHTML = i
+  v = i;
+  v = met_punt(v)
+  document.getElementById("display").innerHTML = v;
 }
 }
 function _1000() {
@@ -229,7 +225,9 @@ function _1000() {
   x_down = localStorage.getItem("mpc");
   i = JSON.parse(i_down)
   x = JSON.parse(x_down)
-  document.getElementById("display").innerHTML = i
+  v = i;
+  v = met_punt(v)
+  document.getElementById("display").innerHTML = v;
 }
 }
 function _10000() {
@@ -247,7 +245,9 @@ function _10000() {
   x_down = localStorage.getItem("mpc");
   i = JSON.parse(i_down)
   x = JSON.parse(x_down)
-  document.getElementById("display").innerHTML = i
+  v = i;
+  v = met_punt(v)
+  document.getElementById("display").innerHTML = v;
 }
 }
 function _100000() {
@@ -265,7 +265,9 @@ function _100000() {
   x_down = localStorage.getItem("mpc");
   i = JSON.parse(i_down)
   x = JSON.parse(x_down)
-  document.getElementById("display").innerHTML = i
+  v = i;
+  v = met_punt(v)
+  document.getElementById("display").innerHTML = v;
 }
 }
 function _1000000() {
@@ -283,7 +285,9 @@ function _1000000() {
   x_down = localStorage.getItem("mpc");
   i = JSON.parse(i_down)
   x = JSON.parse(x_down)
-  document.getElementById("display").innerHTML = i
+  v = i;
+  v = met_punt(v)
+  document.getElementById("display").innerHTML = v;
 }
 }
 function _10000000() {
@@ -301,7 +305,9 @@ function _10000000() {
   x_down = localStorage.getItem("mpc");
   i = JSON.parse(i_down)
   x = JSON.parse(x_down)
-  document.getElementById("display").innerHTML = i
+  v = i;
+  v = met_punt(v)
+  document.getElementById("display").innerHTML = v;
 }
 }
 function _100000000() {
@@ -319,7 +325,9 @@ function _100000000() {
   x_down = localStorage.getItem("mpc");
   i = JSON.parse(i_down)
   x = JSON.parse(x_down)
-  document.getElementById("display").innerHTML = i
+  v = i;
+  v = met_punt(v)
+  document.getElementById("display").innerHTML = v;
 }
 }
 function _1s() {
@@ -330,14 +338,10 @@ function _1s() {
       l = l + 1;
       i = i - 500;
 
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       document.getElementById("test3000").innerHTML = l;
       document.getElementById("test4000").innerHTML = x;
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       l_save = JSON.stringify(l);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -356,14 +360,10 @@ function _11s() {
       l = l + 11;
       i = i - 10000;
 
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       document.getElementById("test3000").innerHTML = l;
       document.getElementById("test4000").innerHTML = x;
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       l_save = JSON.stringify(l);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -382,14 +382,10 @@ function _121s() {
       l = l + 121;
       i = i - 1000000;
 
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       document.getElementById("test3000").innerHTML = l;
       document.getElementById("test4000").innerHTML = x;
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       l_save = JSON.stringify(l);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -408,14 +404,10 @@ function _1221s() {
       l = l + 1221;
       i = i - 25000000;
 
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       document.getElementById("test3000").innerHTML = l;
       document.getElementById("test4000").innerHTML = x;
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       l_save = JSON.stringify(l);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -434,14 +426,10 @@ function _12321s() {
       l = l + 12321;
       i = i - 250000000;
 
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       document.getElementById("test3000").innerHTML = l;
       document.getElementById("test4000").innerHTML = x;
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       l_save = JSON.stringify(l);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -460,14 +448,10 @@ function _1234321s() {
       l = l + 1234321;
       i = i - 1000000000;
 
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       document.getElementById("test3000").innerHTML = l;
       document.getElementById("test4000").innerHTML = x;
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       l_save = JSON.stringify(l);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -486,14 +470,10 @@ function _2345432s() {
       l = l + 2345432;
       i = i - 100000000000;
 
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       document.getElementById("test3000").innerHTML = l;
       document.getElementById("test4000").innerHTML = x;
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       l_save = JSON.stringify(l);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -512,14 +492,10 @@ function _10000000s() {
       l = l + 10000000;
       i = i - 1000000000000;
 
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       document.getElementById("test3000").innerHTML = l;
       document.getElementById("test4000").innerHTML = x;
-      v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+      document.getElementById("display").innerHTML = i;
       l_save = JSON.stringify(l);
       i_save = JSON.stringify(i);
       localStorage.setItem("geld", i_save);
@@ -547,9 +523,9 @@ function timer() {
   l = JSON.parse(l_down);
   n = JSON.parse(n_down);
 
-  v = i
-met_punt(n)
-document.getElementById("display").innerHTML = v;
+  v = i;
+  v = met_punt(v)
+  document.getElementById("display").innerHTML = v;
 }
 window.setInterval(timer, 1000);
 function t_s(i)
