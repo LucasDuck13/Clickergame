@@ -522,18 +522,11 @@ function timer() {
   i = JSON.parse(i_down);
   l = JSON.parse(l_down);
   n = JSON.parse(n_down);
-
   v = i;
   v = met_punt(v)
   document.getElementById("display").innerHTML = v;
 }
 window.setInterval(timer, 1000);
-function t_s(i)
-  {
-    var i_parts = i.toString().split(".");
-    i_parts[0] = i_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return i_parts.join(".");
-  }
 </script>
 </body>
 </html>
