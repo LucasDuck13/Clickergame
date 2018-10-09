@@ -124,7 +124,7 @@ function met_punt(){
   const numberWithCommas = (v) => {
   return v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-}
+
 document.getElementById("display").innerHTML = i;
 x_save = JSON.stringify(x);
 i_save = JSON.stringify(i);
@@ -167,7 +167,7 @@ function incNumber() {
       x = JSON.parse(x_down);
       l = JSON.parse(l_down);
       n = JSON.parse(n_down);
-      document.getElementById("display").innerHTML = i;
+      document.getElementById("display").innerHTML = v;
 }
 
 function _10() {
