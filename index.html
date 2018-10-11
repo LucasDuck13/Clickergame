@@ -98,6 +98,17 @@ a:active {
 
 
 <script type="text/javascript">
+function c(nStr) {
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
+}
 if (localStorage.getItem("mpc" === null)){
   var n = 50;
   var i = 50;
@@ -146,6 +157,7 @@ function incNumber() {
       n = n + x;
       i = i + x;
       v = i;
+      v = c(v);
       document.getElementById("display").innerHTML = v;
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
@@ -162,7 +174,7 @@ function incNumber() {
       x = JSON.parse(x_down);
       l = JSON.parse(l_down);
       n = JSON.parse(n_down);
-      v = met_punt(v)
+      v = c(v);
       document.getElementById("display").innerHTML = v;
 }
 
