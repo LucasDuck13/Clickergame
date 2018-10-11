@@ -120,10 +120,6 @@ var l = 0;
 }
 //v = beeldding
 var v = i;
-function met_punt(){
-  const numberWithCommas = (v) => {
-  return v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
 
 document.getElementById("display").innerHTML = i;
 x_save = JSON.stringify(x);
@@ -166,6 +162,7 @@ function incNumber() {
       x = JSON.parse(x_down);
       l = JSON.parse(l_down);
       n = JSON.parse(n_down);
+      v = met_punt(v)
       document.getElementById("display").innerHTML = v;
 }
 
