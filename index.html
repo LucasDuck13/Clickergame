@@ -129,11 +129,6 @@ var l = 0;
  var l = JSON.parse(localStorage.getItem("gps"))
  var n = JSON.parse(localStorage.getItem("totgeld"))
 }
-//v = beeldding
-var v = i;
-
-document.getElementById("display").innerHTML = clear();
-document.getElementById("display").innerHTML = v;
 x_save = JSON.stringify(x);
 i_save = JSON.stringify(i);
 n_save = JSON.stringify(n);
@@ -146,7 +141,12 @@ n_down = localStorage.getItem("totgeld")
 i = JSON.parse(i_down);
 x = JSON.parse(x_down);
 n = JSON.parse(n_down);
+//v = beeldding
 
+var v = i;
+
+document.getElementById("display").innerHTML = clear();
+document.getElementById("display").innerHTML = v;
 function incNumber() {
       n_down = localStorage.getItem("totgeld")
       i_down = localStorage.getItem("geld");
