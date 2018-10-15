@@ -132,7 +132,8 @@ var l = 0;
 //v = beeldding
 var v = i;
 
-document.getElementById("display").innerHTML = i;
+document.getElementById("display").innerHTML = clear();
+document.getElementById("display").innerHTML = v;
 x_save = JSON.stringify(x);
 i_save = JSON.stringify(i);
 n_save = JSON.stringify(n);
@@ -147,7 +148,6 @@ x = JSON.parse(x_down);
 n = JSON.parse(n_down);
 
 function incNumber() {
-  document.getElementById("display").innerHTML = i;
       n_down = localStorage.getItem("totgeld")
       i_down = localStorage.getItem("geld");
       x_down = localStorage.getItem("mpc");
@@ -158,6 +158,7 @@ function incNumber() {
       i = i + x;
       v = i;
       v = c(v);
+      document.getElementById("display").innerHTML = clear();
       document.getElementById("display").innerHTML = v;
       x_save = JSON.stringify(x);
       i_save = JSON.stringify(i);
@@ -175,6 +176,7 @@ function incNumber() {
       l = JSON.parse(l_down);
       n = JSON.parse(n_down);
       v = c(v);
+      document.getElementById("display").innerHTML = clear();
       document.getElementById("display").innerHTML = v;
 }
 
