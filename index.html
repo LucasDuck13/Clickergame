@@ -109,39 +109,12 @@ function c(nStr) {
     }
     return x1 + x2;
 }
-if (localStorage.getItem("mpc" === null)){
+  
   var n = 50;
   var i = 50;
   var x = 0;
   var l = 0;
-} else if (JSON.parse(localStorage.getItem("geld")) == 0){
-// i = geld
-var i = 50;
-// n = totaal geld
-var n = 50;
-// x = geld per klik
-var x = 0;
-// l = geld per seconde
-var l = 0;
-} else {
- var i = JSON.parse(localStorage.getItem("geld"))
- var x = JSON.parse(localStorage.getItem("mpc"))
- var l = JSON.parse(localStorage.getItem("gps"))
- var n = JSON.parse(localStorage.getItem("totgeld"))
-}
-x_save = JSON.stringify(x);
-i_save = JSON.stringify(i);
-n_save = JSON.stringify(n);
-localStorage.setItem("geld", i_save);
-localStorage.setItem("mpc", x_save);
-localStorage.setItem("totgeld", n_save);
-i_down = localStorage.getItem("geld");
-x_down = localStorage.getItem("mpc");
-n_down = localStorage.getItem("totgeld")
-i = JSON.parse(i_down);
-x = JSON.parse(x_down);
-n = JSON.parse(n_down);
-//v = beeldding
+
 
 var v = i;
 document.getElementById("display").innerHTML = clear();
