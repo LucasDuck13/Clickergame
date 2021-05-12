@@ -120,14 +120,14 @@ function c(nStr) {
 
 
 var v = i;
-document.getElementById("display").innerHTML="";
+document.getElementById("display").innerHTML.clear();
 document.getElementById("display").innerHTML=v;
   
 function incNumber() {
       i = i + x;
       v = i;
       v = c(v);
-      document.getElementById("display").innerHTML="";
+      document.getElementById("display").innerHTML.clear();
       document.getElementById("display").innerHTML=v;
 }
 
@@ -138,16 +138,6 @@ function buy_button(price, increase) {
   x = x + increase;
   i = i - price;
 
-  x_save = JSON.stringify(x);
-  i_save = JSON.stringify(i);
-  localStorage.setItem("geld", i_save);
-  localStorage.setItem("mpc", x_save);
-  i_down = localStorage.getItem("geld");
-  x_down = localStorage.getItem("mpc");
-  i = JSON.parse(i_down)
-  x = JSON.parse(x_down)
-  v = i;
-  v = met_punt(v)
   document.getElementById("display").innerHTML = v;
 }
 
@@ -159,19 +149,6 @@ function buy_timer(price, increase) {
   } else {
       l = l + increase;
       i = i - price;
-
-      document.getElementById("display").innerHTML = i;
-      document.getElementById("test3000").innerHTML = l;
-      document.getElementById("test4000").innerHTML = x;
-      document.getElementById("display").innerHTML = i;
-      l_save = JSON.stringify(l);
-      i_save = JSON.stringify(i);
-      localStorage.setItem("geld", i_save);
-      localStorage.setItem("gps", l_save);
-      i_down = localStorage.getItem("geld", i_save);
-      l_down = localStorage.getItem("gps", l_save);
-      i = JSON.parse(i_down)
-      l = JSON.parse(l_down)
   }
 }
 
