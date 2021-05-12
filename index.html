@@ -120,15 +120,15 @@ function c(nStr) {
 
 
 var v = i;
-document.getElementById("display").innerHTML.clear();
-document.getElementById("display").innerHTML = v;
+document.getElementById("display").text="";
+document.getElementById("display").text=v;
   
 function incNumber() {
       i = i + x;
       v = i;
       v = c(v);
-      document.getElementById("display").innerHTML.clear();
-      document.getElementById("display").innerHTML = v;
+      document.getElementById("display").text="";
+      document.getElementById("display").text=v;
 }
 
 function buy_button(price, increase) {
