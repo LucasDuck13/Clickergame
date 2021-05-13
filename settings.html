@@ -71,15 +71,26 @@ a:active {
   <th id="cool">Settings</th>
   <th id="cool"><div id="button"><a href="changelog.html">Changelog</a></div></th></tr>
 <tr> <th> <input type="button" class="button" value="reset" id="knoppie" onclick="reset()"/> <br> </th> </tr>
+ <tr> <th> <p id="tekst"> autosave over </p> </th> </tr>
 </table>
 </body>
 <script>
+ var a = 0;
 function reset() {
   if (confirm("weet je het zeker?")) {
       localStorage.clear()
       localStorage.setItem("geld", 50);
   } else {
   }
+ clock(i) {
+  if (i > 99) {
+   i = 0
+  } else {
+  document.getElementById("p1").innerHTML = i;
+   i = i + 1;
+  }
+ }
+ setTimeout("clock(a)",100)
 }
 </script>
 </html>
