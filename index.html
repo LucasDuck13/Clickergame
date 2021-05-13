@@ -64,26 +64,14 @@ a:active {
 </head>
   
       <script>
-/*function c(nStr) {
-    nStr += '';
-    x = nStr.split('.');
-    x1 = x[0];
-    x2 = x.length > 1 ? '.' + x[1] : '';
-    var rgx = /(\d+)(\d{3})/;
-    while (rgx.test(x1)) {
-            x1 = x1.replace(rgx, '$1' + ',' + '$2');
-    }
-    return x1 + x2;
-}*/
-      
 function clearPDispF()
 {   
     document.getElementById("display").innerHTML = '';
 }
       
-function printPDispF()
+function printPDispF(value)
 {   
-    document.getElementById("display").innerHTML="$"+v;
+    document.getElementById("display").innerHTML="$"+value;
 }
   
   var n = 50;
@@ -91,18 +79,13 @@ function printPDispF()
   var x = 0;
   var l = 0;
 
-
-var v = i;
 clearPDispF();
 printPDispF();
   
 function incNumber() {
       i = i + x;
-      v = i;
-      /*v = c(i);*/
       clearPDispF();
-      printPDispF();
-      document.getElementById("display").innerHTML=v;
+      printPDispF(i);
 }
 
 function buy_button(price, increase) {
@@ -111,8 +94,7 @@ function buy_button(price, increase) {
   } else {
   x = x + increase;
   i = i - price;
-
-  printPDispF();
+  printPDispF(i);
 }
 
 }
@@ -123,6 +105,7 @@ function buy_timer(price, increase) {
   } else {
       l = l + increase;
       i = i - price;
+      printPDispF(i);
   }
 }
 
@@ -131,9 +114,7 @@ function timer() {
   n = n + l;
 
 if (v !== null) {
-  var v = i;
- //v = c(v);
-printPDispF();
+printPDispF(i);
 }
 }
 window.setInterval(timer(), 1000);
