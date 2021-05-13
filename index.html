@@ -112,6 +112,11 @@ function c(nStr) {
     }
     return x1 + x2;
 }
+      
+          function clearF()
+    {   
+        document.getElementById("display").innerHTML = '';
+    }
   
   var n = 50;
   var i = 50;
@@ -121,14 +126,14 @@ function c(nStr) {
 
 var v = i;
 document.getElementById("display").innerHTML.clear();
-document.getElementById("display").innerHTML=v;
+clearF();
   
 function incNumber() {
       i = i + x;
       v = i;
       v = c(v);
       document.getElementById("display").innerHTML.clear();
-      document.getElementById("display").innerHTML=v;
+      clearF();
 }
 
 function buy_button(price, increase) {
