@@ -117,6 +117,11 @@ function clearPDispF()
 {   
     document.getElementById("display").innerHTML = '';
 }
+      
+function printPDispF()
+{   
+    document.getElementById("display").innerHTML="$"+v;
+}
   
   var n = 50;
   var i = 50;
@@ -126,31 +131,32 @@ function clearPDispF()
 
 var v = i;
 clearPDispF();
-document.getElementById("display").innerHTML=v;
+printPDispF();
   
 function incNumber() {
       i = i + x;
       v = i;
       /*v = c(i);*/
       clearPDispF();
+      printPDispF();
       document.getElementById("display").innerHTML=v;
 }
 
 function buy_button(price, increase) {
   if (i < price) {
-    window.alert("je hebt minimaal ${price} nodig")
+    window.alert("je hebt minimaal $" + price + " nodig")
   } else {
   x = x + increase;
   i = i - price;
 
-  document.getElementById("display").innerHTML = v;
+  printPDispF();
 }
 
 }
 function buy_timer(price, increase) {
   if (i < price) {
 
-    window.alert("je hebt minimaal " + price + " nodig")
+    window.alert("je hebt minimaal $" + price + " nodig")
   } else {
       l = l + increase;
       i = i - price;
@@ -164,7 +170,7 @@ function timer() {
 if (v !== null) {
   var v = i;
  //v = c(v);
-document.getElementById("display").innerHTML = v;}
+printPDispF();
 }
 window.setInterval(timer(), 1000);
 </script>
