@@ -70,7 +70,7 @@ a:active {
   <th id="cool"><div id="button"><a href="settings.html">Settings</a></div></th>
   <th id="cool"><div id="button"><a href="changelog.html">Changelog</a></div></th>
 </tr>
-<tr> <th> <p id="display" style = backgroud-color:#666666;>50</p> <br> </th> </tr>
+<tr> <th> <label id="display" style = backgroud-color:#666666;>50</label> <br> </th> </tr>
 
 <tr> <th> <input type="button" class="button" value="klik mij" id="button" onclick="incNumber()"/> <br> </th> </tr>
 
@@ -101,7 +101,7 @@ a:active {
 </table>
 </body>
     <script>
-function c(nStr) {
+/*function c(nStr) {
     nStr += '';
     x = nStr.split('.');
     x1 = x[0];
@@ -111,12 +111,12 @@ function c(nStr) {
             x1 = x1.replace(rgx, '$1' + ',' + '$2');
     }
     return x1 + x2;
-}
+}*/
       
-          function clearPDispF()
-    {   
-        document.getElementById("display").innerHTML = '';
-    }
+function clearPDispF()
+{   
+    document.getElementById("display").innerHTML = '';
+}
   
   var n = 50;
   var i = 50;
@@ -131,7 +131,7 @@ document.getElementById("display").innerHTML=v;
 function incNumber() {
       i = i + x;
       v = i;
-      v = c(v);
+      /*v = c(i);*/
       clearPDispF();
       document.getElementById("display").innerHTML=v;
 }
