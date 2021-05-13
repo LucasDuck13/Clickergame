@@ -113,7 +113,7 @@ function c(nStr) {
     return x1 + x2;
 }
       
-          function clearF()
+          function clearPDispF()
     {   
         document.getElementById("display").innerHTML = '';
     }
@@ -125,14 +125,14 @@ function c(nStr) {
 
 
 var v = i;
-clearF();
+clearPDispF();
 document.getElementById("display").innerHTML=v;
   
 function incNumber() {
       i = i + x;
       v = i;
       v = c(v);
-      clearF();
+      clearPDispF();
       document.getElementById("display").innerHTML=v;
 }
 
